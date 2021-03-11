@@ -1,0 +1,87 @@
+
+body {
+    background: url(Resources/background.jpg) fixed;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 75px 80px;
+    list-style-type: disc;
+    font-size: 18px;
+}
+
+div#main_container{
+    background-color:rgba(0, 0, 0, 0.4);
+    padding: 25px 20px;
+}
+
+div.list_of_h3{
+}
+
+hr{
+    border: 4px solid white;
+    width: 100%;
+    margin-top: 25px;
+}
+
+hr#header_hr{
+    border: 8px solid white;
+    margin-bottom: 80px;
+    width: 35%;
+}
+
+hr.list_of_h3{
+    border: 2px solid gray;
+    width: 80%;
+}
+
+a:link {
+    color: blueviolet;
+}
+
+a:visited {
+    color: darkslateblue;
+}
+
+
+.table_of_contents {
+    line-height: 1.55;
+}
+
+a:visited.table_of_contents {
+    color: blueviolet;
+}
+
+a:active {
+    color: red;
+}
+
+
+p {
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1.75em;
+}
+
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3em;
+    text-align: left;
+}
+
+h3 {
+    font-size: 2em;
+    text-align: left;
+}
+
+ul {
+    font-size: 1.5em;
+}
+ol {
+    font-size: 1.5em;
+}
+
+
