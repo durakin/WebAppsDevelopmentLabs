@@ -1,30 +1,15 @@
 body{
-    color: white;
-}
-
-header a:link{
-    color: white;
-}
-
-header a:visited{
-    color: white;
-}
-
-.navbar {
-    background: none;
-}
-
-.my-navbar-link {
-    color: white !important;
+    color: black;
 }
 
 div#main_container{
-    background-color:rgba(0, 0, 0, 0.65);
-    color: white;
+    background-color:rgba(255, 255, 255, 0.55);
+    padding: 25px 20px;
+
 }
 
 div.table_of_contents{
-    background-color:rgba(0, 0, 0, 0.7);
+    background-color:rgba(255, 255, 255, 0.7);
     display: table;
     padding-left: 10px;
     padding-right: 20px;
@@ -55,24 +40,22 @@ hr#header_hr{
     width: 80%;
 }
 
-
 a:link {
-    color: blueviolet;
-}
-
-.table_of_contents a:visited {
-    color: dodgerblue;
+    color: darkblue;
 }
 
 .table_of_contents a:link
 {
-    color: dodgerblue;
+    color: darkblue;
+}
+
+.table_of_contents a:visited {
+    color: purple;
 }
 
 a:visited {
-    color: darkslateblue;
+    color: darkblue;
 }
-
 
 
 a:active {
@@ -80,7 +63,7 @@ a:active {
 }
 
 
-.table_of_contents a:active{
+.table_of_contents a:active {
     color: red;
 }
 
