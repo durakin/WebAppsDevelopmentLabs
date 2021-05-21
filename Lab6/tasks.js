@@ -19,4 +19,4 @@ console.log("В последовательности натуральных чи
 function countSuffix(array, suffix) {
     return array.filter(x => String(x).slice(-1 * String(suffix).length) === String(suffix)).length;
 }
-console.log(countSuffix([123, 122, 124, '222', 322, 232], '22'));
+console.log(countSuffix([123, 122, 124, '222', 322, 232, 223], '22'));
