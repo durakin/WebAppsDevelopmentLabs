@@ -76,7 +76,7 @@
     </div>
 
 
-    <div class="list_of_h3">
+    <div id="list_of_memes" class="list_of_h3">
         <hr class="list_of_h3"/>
         <h3>
             SSAO <a id="ssao"></a>
@@ -135,8 +135,13 @@
         <hr class="list_of_h3"/>
     </div>
 
-    <form>
-
+    <script src="addMeme.js"></script>
+    <form name="addMeme" onsubmit="addMemeAction()">
+        <label for=meme>Мем</label>
+        <textarea id="meme" name="comment" cols="30" rows="3"></textarea><br>
+        <label for=description>Описание</label>
+        <textarea id="description" name="comment" cols="30" rows="3"></textarea><br>
+        <input type="submit" value="Отправить">
     </form>
 
     <hr/>
