@@ -131,7 +131,7 @@
     </div>
     <hr class="list_of_h3"/>
 
-    <form name="suggest_meme">
+    <form name="suggest_meme" method="post">
         <label>
             <input type="radio" name="typeOfSubmission">
             Описание мема
@@ -153,7 +153,7 @@
 
     <script>
         let form = document.forms[0];
-        console.log("LOADED");
+        //console.log("LOADED");
 
         function validURL(str) {
             let pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
@@ -167,7 +167,7 @@
         let meme = document.getElementById("meme")
         console.log(meme);
         function checkURL() {
-            console.log("Blur!");
+            //console.log("Blur!");
             if (!!validURL(meme.value)) {
                 meme.classList.add("invalid_form");
             }
@@ -177,18 +177,15 @@
                 }
             }
         }
-        meme.onblur = checkURL;
-        meme.onfocus = function () {
-            meme.classList.add("invalid_form");
-        }
+        meme.onclick = checkURL;
         let submitButton = document.getElementById("submitButton");
         function checkFormRadio() {
             checkURL();
-            console.log("Check choice");
+            //console.log("Check choice");
             submitButton.disabled ||= !(form.typeOfSubmission[0].checked || form.typeOfSubmission[1].checked);
         }
         function checkFormURL() {
-            console.log("Check URL");
+            //console.log("Check URL");
             submitButton.disabled ||= meme.classList.contains("invalid_form");
         }
         function checkForm() {
@@ -197,9 +194,20 @@
             checkFormURL();
         }
 
-        checkForm();
+        submitButton.disabled = true;
         form.addEventListener("click", checkForm);
 
+        function submitForm() {
+            console.log("Form submitted");
+            let form_result = {
+                is_biography: form.typeOfSubmission[1].checked,
+                prove_url: meme.value,
+                meme_description: document.getElementById("description").value,
+            }
+            console.log(form_result);
+        }
+
+        form.addEventListener("submit", submitForm);
 
     </script>
 
